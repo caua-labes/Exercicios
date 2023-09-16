@@ -46,41 +46,69 @@
     </div>
     <div class="formulario">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="nome">
+        <input type="text" id="nome" placeholder="Nome">
 
-        <label for="salario">Sálario</label>
-        <input type="number" id="salario" placeholder="sálario">
+        <label for="salario">Salario</label>
+        <input type="number" id="salario" placeholder="salario">
 
-        <label for="Sp">Supervisores</label>
-        <input type="radio" id="Sp">
-        <label for="Ge">Gerente</label>
-        <input type="radio" id="Ge">
-        <label for="Op"> Operadores</label>
-        <input type="radio" id="Op">
-        <label for="Co"> Colaboradores</label>
-        <input type="radio" id="Co">
+        <label for="gerente">Gerente</label>
+        <input type="radio" name="cargo" id="gerente">
+
+        <label for="supervisor">Supervisor</label>
+        <input type="radio" name="cargo" id="supervisor">
+
+        <label for="operador">Operador</label>
+        <input type="radio" name="cargo" id="operador">
+
+        <label for="colaborador">Colaorador</label>
+        <input type="radio" name="cargo" id="colaborador">
+
     </div>
-    <p id="sal">Seu antigo salario</p>
-    <p id="aumento">Porentagem de aumento</p>
-    <p id="novosal">Salario</p>
-    <p id="aum">Seu aumento</p>
+    <button onclick="verificacaoCargos()">Calcular</button>
 
-    <button class="button" onclick="Cargos()">Enviar</button>
+    <p id="aumento"></p>
+    <p id="novosalario"></p>
+    <p id="porcentagem"></p>
 
     <script>
-        function Cargos() {
-            var cargo1 = document.getElementById("Sp")
+        function verificacaoCargos() {
+            var ge = document.querySelector("#gerente")
+            var sp = document.querySelector("#supervisor")
+            var op = document.querySelector("#operador")
+            var co = document.querySelector("#colaborador")
+            var nm = document.getElementById("nome")
+            var sal = parseFloat(document.getElementById("salario").value)
 
-            var sal = parseInt(Document.getElementById("salario").value)
-
-            
-
-            if () {
-                var aum = (sal * 0.08)
-                var novosal = (aum + sal)
-                var aumento = ("8%")
-
-                document.getElementById("sal").innerHTML = sal
+            if (ge.checked) {
+                var aumento = (sal * 0.05)
+                var novosalario = (sal + aumento)
+                document.getElementById("aumento").innerHTML = "Seu novo aumento é " + aumento
+                document.getElementById("novosalario").innerHTML = "Seu novo salario é " + novosalario
+                document.getElementById("porcentagem").innerHTML = "5%"
+            }
+            if (sp.checked) {
+                var aumento = (sal * 0.08)
+                var novosalario = (sal + aumento)
+                document.getElementById("aumento").innerHTML = "Seu novo aumento é " + aumento
+                document.getElementById("novosalario").innerHTML = "Seu novo salario é " + novosalario
+                document.getElementById("porcentagem").innerHTML = "8%"
+            }
+            if (op.checked) {
+                var aumento = (sal * 0.09)
+                var novosalario = (sal + aumento)
+                document.getElementById("aumento").innerHTML = "Seu novo aumento é " + aumento
+                document.getElementById("novosalario").innerHTML = "Seu novo salario é " + novosalario
+                document.getElementById("porcentagem").innerHTML = "9%"
+            }
+            if (co.checked) {
+                var aumento = (sal * 0.10)
+                var novosalario = (sal + aumento)
+                document.getElementById("aumento").innerHTML = "Seu novo aumento é " + aumento
+                document.getElementById("novosalario").innerHTML = "Seu novo salario é " + novosalario
+                document.getElementById("porcentagem").innerHTML = "10%"
             }
         }
     </script>
+</body>
+
+</html>
