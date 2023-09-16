@@ -1,0 +1,75 @@
+header{
+    background-color: #FFCC00;
+}
+
+body{
+    margin: 0px;
+}
+.logo{
+    display: flex;
+    font-family: monospace;
+    justify-content: space-between;
+}
+.nomemarca{
+    padding-top: 42px;
+    font-size: 25px;
+}
+.atividadesh{
+    padding-top: 22px;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.marcas{
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.linksh{
+    display: none;  
+    flex-direction: column;
+    
+}
+.atividadesh:hover .linksh{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.texto
+{
+    font-family: monospace;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+footer{
+    text-align: center;
+    margin-top: 493px;
+    background-color: #FFCC00;
+    padding-bottom: 11px;
+
+}
+.texfot{
+    font-family: monospace;
+    padding-top: 1px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: monospace;
+    margin-left: 48%;
+    margin-right: 48%;
+}
+      .menor{
+        text-align: center;
+        font-family: monospace;
+        font-size: 20px;
+      }
+      button{
+        margin: 1px;
+      }
+
