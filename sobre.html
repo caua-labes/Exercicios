@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="header">
+
+            <div class="logo">
+
+                <div class="atividadesh">
+
+                    <p>Atividades</p>
+                    <div class="linksh">
+                        <ol>
+                            <li><a href="./hub.html">Atividade</a></li>
+                            <li><a href="./Atividade2.html">Atividade</a></li>
+                            <li><a href="./Atividade3.html">Atividade</a></li>
+                            <li><a href="Atividade4.html">Atividade</a></li>
+                            <li><a href="Atividade5.html">Atividade</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="marcas">
+                    <h2 class="nomemarca">gartola</h2>
+                    <img src="./imagens/logo marca.png" alt="Logo marca" width="150px" height="150px">
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <div class="textosobre">
+
+        <h2>Sobre esse site</h2>
+
+        <p>Este site é uma missão que foi dada pelo instrutor Vilson e eu estou aqui para realizar esta missão e
+            dar meu maximo, então escreva oque você acha abaixo</p>
+
+        <labeL for="comentario">Escreva seu comentario</labeL>
+        <input type="text" id="comentario">
+
+        <button onclick="coment()">Enviar</button>
+
+        <script>
+            function coment(){
+                var comt = document.getElementById("comentario").value
+                if(comt === ""){
+                    alert("Escreva seu comentario");
+                }
+                else{
+                alert("Seu comentario foi enviado");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
