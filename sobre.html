@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,22 +46,24 @@
 
         <p>Este site é uma missão que foi dada pelo instrutor Vilson e eu estou aqui para realizar esta missão e
             dar meu maximo, então escreva oque você acha abaixo</p>
-
-        <labeL for="comentario">Escreva seu comentario</labeL>
-        <input type="text" id="comentario">
-
-        <button onclick="coment()">Enviar</button>
-
+        <div class="formulario">
+            <labeL for="comentario">Escreva seu comentario</labeL>
+            <input type="text" id="comentario">
+        </div>
+        </div>
+        <div class="bot5">
+            <button class="button" onclick="coment()">Enviar</button>
+        </div>  
         <script>
-            function coment(){
+            function coment() {
                 var comt = document.getElementById("comentario").value
-                if(comt === ""){
+                if (comt === "") {
                     alert("Escreva seu comentario");
                 }
-                else{
-                alert("Seu comentario foi enviado");
+                else {
+                    alert("Seu comentario foi enviado");
                 }
-                
+
             }
         </script>
     </div>
